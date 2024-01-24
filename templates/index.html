@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Week 2 ToDo App">
+    <meta name="author" content="Brandon Rho">
+    <meta name="keywords" content="HTML, CSS, Python, Flask">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>To Do App</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>To Do App</h1>
+    </header>
+
+    <form action="/add" method="POST">
+        <div>
+            <label>ToDo: </label>
+            <input type="text" name="title" placeholder="What do you need ToDo?">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <hr>
+
+    {% for todo in todo_list%}
+    
+    <p>{{ todo.id }} | {{ todo.title }}</p>
+
+    {% if todo.complete == False %}
+    <span>Not Complete</span>
+    {% else %}
+    <span>Completed</span>
+    {% endif %}
+
+    <a href="/update/{{ todo.id }}">Mark/Unmark</a>
+    <a href="/delete/{{ todo.id }}">Delete</a>
+
+    {% endfor %}
+    
+</body>
+</html>
