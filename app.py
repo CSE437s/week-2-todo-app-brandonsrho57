@@ -1,6 +1,7 @@
 # REFERENCES
 # https://flask.palletsprojects.com/en/3.0.x/
 # https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/quickstart/#installation
+# https://stackoverflow.com/questions/76295826/how-to-create-tables-with-flask-and-sqlalchemy
 # https://github.com/brandonsrho57/Simple_Flask_Clone/tree/main (My own repository)
 
 # Library imports
